@@ -149,7 +149,10 @@
   object-fit: cover; /* Fills the frame but may crop the video */
 }
 .bg-hero-pattern {
-  background-image: url('../assets/herobg.png');
+  background-image: url('/assets/herobg.png'); /* Note the leading / for public folder */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Responsive adjustments for smaller screens */
