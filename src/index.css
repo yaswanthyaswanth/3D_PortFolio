@@ -146,7 +146,7 @@
   width: 74%;
   height: 83%;
   border-radius: 30px;
-  object-fit: contain; /* Changed to contain to preserve video aspect ratio */
+  object-fit: contain; /* Preserves video aspect ratio */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -164,12 +164,12 @@
   }
 
   .video-inside-frame {
-    top: 12%;
-    left: 18%;
-    width: 74%;
-    height: 83%;
+    top: 10%; /* Adjusted to move the video up slightly */
+    left: 16%; /* Adjusted to move the video left slightly */
+    width: 78%; /* Increased to reduce horizontal gaps */
+    height: 87%; /* Increased to reduce vertical gaps */
     border-radius: 30px;
-    object-fit: contain; /* Keep the same values to prevent resizing */
+    object-fit: contain; /* Keep the same to preserve aspect ratio */
   }
 }
 
