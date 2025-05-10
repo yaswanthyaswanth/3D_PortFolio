@@ -1,4 +1,3 @@
-// components/ImageComparison.jsx
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -30,7 +29,6 @@ const imageComparisons = [
     beforeImage: "before4.jpg",
     afterImage: "after4.jpg"
   },
-  // Add more comparisons if needed
 ];
 
 const ImageComparison = () => {
@@ -39,47 +37,55 @@ const ImageComparison = () => {
   );
   const containerRefs = useRef([]);
 
-  const handleSliderStart = (index, clientX) => {
+  const handleSliderStart = (index, clientX, isTouch = false) => {
     const container = containerRefs.current[index];
     if (!container) return;
-  
+
     const handleMove = (moveClientX) => {
       const rect = container.getBoundingClientRect();
       const x = Math.max(0, Math.min(moveClientX - rect.left, rect.width));
       const percentage = (x / rect.width) * 100;
-  
+
       setSliderPositions((prev) => {
         const newPositions = [...prev];
         newPositions[index] = percentage;
         return newPositions;
       });
     };
-  
-    const handleMouseMove = (e) => handleMove(e.clientX);
-    const handleTouchMove = (e) => handleMove(e.touches[0].clientX);
-  
+
+    const handleMouseMove = (e) => {
+      handleMove(e.clientX);
+    };
+
+    const handleTouchMove = (e) => {
+      e.preventDefault(); // Prevent scrolling on touch devices
+      handleMove(e.touches[0].clientX);
+    };
+
     const handleEnd = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleEnd);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleEnd);
     };
-  
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleEnd);
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchend", handleEnd);
+
+    if (isTouch) {
+      window.addEventListener("touchmove", handleTouchMove, { passive: false });
+      window.addEventListener("touchend", handleEnd);
+    } else {
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleEnd);
+    }
   };
-  
+
   const handleMouseDown = (index, e) => {
-    e.preventDefault();
-    handleSliderStart(index, e.clientX);
+    e.preventDefault(); // Prevent text selection or other default behaviors
+    handleSliderStart(index, e.clientX, false);
   };
-  
+
   const handleTouchStart = (index, e) => {
-    handleSliderStart(index, e.touches[0].clientX);
+    handleSliderStart(index, e.touches[0].clientX, true);
   };
-  
 
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
@@ -96,22 +102,29 @@ const ImageComparison = () => {
               className="relative w-full h-[400px] rounded-xl overflow-hidden"
               ref={el => containerRefs.current[index] = el}
             >
-              {/* Before Image (full width) */}
+              {/* Before Image (full width, static) */}
               <img
                 src={`/images/${comparison.beforeImage}`}
                 alt={`Before ${comparison.title}`}
                 className="absolute inset-0 w-full h-full object-cover"
+                style={{ position: "absolute", top: 0, left: 0 }}
               />
               
-              {/* After Image (clipped based on slider position) */}
+              {/* After Image Container (clipped, static) */}
               <div
                 className="absolute inset-0 overflow-hidden"
-                style={{ width: `${sliderPositions[index]}%` }}
+                style={{ 
+                  clipPath: `inset(0 ${100 - sliderPositions[index]}% 0 0)`,
+                  position: "absolute",
+                  top: 0,
+                  left: 0
+                }}
               >
                 <img
                   src={`/images/${comparison.afterImage}`}
                   alt={`After ${comparison.title}`}
                   className="w-full h-full object-cover"
+                  style={{ position: "absolute", top: 0, left: 0 }}
                 />
               </div>
               
@@ -120,6 +133,7 @@ const ImageComparison = () => {
                 className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-10"
                 style={{ left: `${sliderPositions[index]}%` }}
                 onMouseDown={(e) => handleMouseDown(index, e)}
+                onTouchStart={(e) => handleTouchStart(index, e)}
               >
                 <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-5 h-10 bg-white rounded-full flex items-center justify-center">
                   <div className="w-1 h-5 bg-gray-800"></div>
