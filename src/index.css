@@ -82,7 +82,6 @@
 }
 
 .blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
   background: #56ccf2; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to top,
@@ -125,28 +124,29 @@
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
-/* Existing styles remain unchanged, adding new styles for the frame and video */
-/* Existing styles remain unchanged, updating styles for the horizontal frame and video */
+
+/* Styles for the frame and video */
 .frame-container {
   position: relative;
   width: 100%;
-  height: 360px; /* Updated for horizontal orientation */
+  height: 360px; /* Default height for larger screens */
 }
 
 .frame-image {
-  top: 8%; /* Adjusted for the horizontal frame */
-  left: 5%; /* Adjusted to account for the left bezel */
+  top: 8%;
+  left: 5%;
   width: 110%;
   height: 90%;
   object-fit: contain; /* Ensures the frame image maintains aspect ratio */
 }
 
 .video-inside-frame {
-  top: 12%; /* Adjusted for the horizontal frame */
-  left: 18%; /* Adjusted to account for the left bezel */
-  width: 74%; /* Adjusted to fit the phone screen width */
-  height: 83%; /* Adjusted to fit the phone screen height */
-  border-radius: 30px; /* Adjusted to match typical phone screen corners in landscape */
+  top: 12%;
+  left: 18%;
+  width: 74%;
+  height: 83%;
+  border-radius: 30px;
+  object-fit: contain; /* Changed to contain to preserve video aspect ratio */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -155,12 +155,21 @@
     height: 240px; /* Reduced height for smaller screens */
   }
 
+  .frame-image {
+    top: 8%;
+    left: 5%;
+    width: 110%;
+    height: 90%;
+    object-fit: contain; /* Keep the same values to maintain alignment */
+  }
+
   .video-inside-frame {
-    top: 10%;
-    left: 15%;
-    width: 70%;
-    height: 80%;
-    border-radius: 10px;
+    top: 12%;
+    left: 18%;
+    width: 74%;
+    height: 83%;
+    border-radius: 30px;
+    object-fit: contain; /* Keep the same values to prevent resizing */
   }
 }
 
