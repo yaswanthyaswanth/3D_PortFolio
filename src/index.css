@@ -148,6 +148,9 @@
   border-radius: 30px;
   object-fit: cover; /* Fills the frame but may crop the video */
 }
+.bg-hero-pattern {
+  background-image: url('../assets/herobg.png');
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 640px) {
