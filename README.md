@@ -190,7 +190,7 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: "",
     icon: unreal,
   },
   {
