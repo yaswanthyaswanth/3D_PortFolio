@@ -133,9 +133,9 @@
 }
 
 .frame-image {
-  top: 8%;
+  top: 7%;
   left: 5%;
-  width: 110%;
+  width: 112%;
   height: 90%;
   object-fit: contain; /* Ensures the frame image maintains aspect ratio */
 }
@@ -146,7 +146,7 @@
   width: 74%;
   height: 83%;
   border-radius: 30px;
-  object-fit: contain; /* Preserves video aspect ratio */
+  object-fit: cover; /* Fills the frame but may crop the video */
 }
 
 /* Responsive adjustments for smaller screens */
@@ -160,16 +160,16 @@
     left: 5%;
     width: 110%;
     height: 90%;
-    object-fit: contain; /* Keep the same values to maintain alignment */
+    object-fit: contain;
   }
 
   .video-inside-frame {
-    top: 10%; /* Adjusted to move the video up slightly */
-    left: 16%; /* Adjusted to move the video left slightly */
-    width: 78%; /* Increased to reduce horizontal gaps */
-    height: 87%; /* Increased to reduce vertical gaps */
+    top: 9%; /* Further adjusted to move the video up */
+    left: 15%; /* Further adjusted to move the video left */
+    width: 80%; /* Further increased to fill horizontal space */
+    height: 89%; /* Further increased to fill vertical space */
     border-radius: 30px;
-    object-fit: contain; /* Keep the same to preserve aspect ratio */
+    object-fit: contain;
   }
 }
 
