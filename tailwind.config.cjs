@@ -18,8 +18,9 @@ module.exports = {
       screens: {
         xs: "450px",
       },
+          /* tailwind.config.cjs */
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern": "url('/assets/herobg.webp')",
       },
     },
   },
