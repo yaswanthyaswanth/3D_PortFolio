@@ -10,8 +10,8 @@ import close from "./close.svg";
 import css from "./tech/css.png";
 //import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
-//import git from "./tech/git.png";
-import unreal from "./tech/unreal.png";
+import git from "./tech/git.png";
+
 import javascript from "./tech/javascript.png";
 //import mongodb from "./tech/mongodb.png";
 //import nodejs from "./tech/nodejs.png";
@@ -44,8 +44,8 @@ export {
   css,
   //docker,
   figma,
-  //git,
-  unreal,
+  git,
+  //unreal,
   javascript,
   //mongodb,
   //nodejs,
