@@ -33,7 +33,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "UnReal Developer",
+    title: "Unreal Developer",
     icon: web,
   },
   {
@@ -52,7 +52,7 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: "unreal",
     icon: unreal,
   },
   {

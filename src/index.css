@@ -69,13 +69,17 @@
        -webkit-text-fill-color: transparent;
      }
 
-     .bg-hero-pattern {
-       background-image: url('/assets/herobg.png');
-       background-size: cover;
-       background-repeat: no-repeat;
-       background-position: center;
-     }
-
+            /* index.css */
+      .bg-hero-pattern {
+        background-image: url('/assets/backgroungimage.png');
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+      }
      .canvas-loader {
        font-size: 10px;
        width: 1em;
