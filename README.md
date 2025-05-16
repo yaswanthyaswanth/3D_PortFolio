@@ -134,14 +134,13 @@ import {
   web,
   javascript,
   typescript,
-  unreal,
   css,
   reactjs,
   redux,
   tailwind,
   nodejs,
   mongodb,
-  unreal,
+  //unreal,
   figma,
   docker,
   meta,
@@ -189,10 +188,10 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "unreal",
-    icon: unreal,
-  },
+  // {
+  //   name: "unreal",
+  //   icon: unreal,
+  // },
   {
     name: "CSS 3",
     icon: css,

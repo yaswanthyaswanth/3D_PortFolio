@@ -10,10 +10,10 @@ import close from "./close.svg";
 import css from "./tech/css.png";
 //import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
-import unreal from "./tech/unreal.png";
+//import unreal from "./tech/unreal.png";
 
 import javascript from "./tech/javascript.png";
-//import mongodb from "./tech/mongodb.png";
+import mongodb from "./tech/mongodb.png";
 //import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
@@ -44,10 +44,9 @@ export {
   css,
   //docker,
   figma,
-  unreal,
   //unreal,
   javascript,
-  //mongodb,
+  mongodb,
   //nodejs,
   reactjs,
   redux,
