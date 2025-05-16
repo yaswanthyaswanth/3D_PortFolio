@@ -5,7 +5,7 @@ import {
   web,
   javascript,
   typescript,
-  git,
+  ggg,
   css,
   reactjs,
   redux,
@@ -52,8 +52,8 @@ const services = [
 
 const technologies = [
   {
-    name: "git",
-    icon: git,
+    name: "ggg",
+    icon: ggg,
   },
   {
     name: "CSS 3",
