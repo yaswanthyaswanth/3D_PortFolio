@@ -15,7 +15,7 @@ import {
   tesla,
   shopify,
   mongodb,
-  
+
 } from "../assets";
 
 export const navLinks = [
@@ -57,6 +57,10 @@ const technologies = [
   //   name: "unreal",
   //   icon: unreal,
   // },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
   {
     name: "CSS 3",
     icon: css,
