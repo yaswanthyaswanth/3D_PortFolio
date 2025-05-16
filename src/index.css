@@ -71,7 +71,7 @@
 
             /* index.css */
       .bg-hero-pattern {
-        background-image: url('/assets/herobg.png');
+        background-image: url('/assets/hero.png');
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
