@@ -5,7 +5,7 @@ import {
   web,
   javascript,
   typescript,
-  ggg,
+  unreal,
   css,
   reactjs,
   redux,
@@ -33,7 +33,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "UnReal Developer",
+    title: "Unreal Developer",
     icon: web,
   },
   {
@@ -52,8 +52,8 @@ const services = [
 
 const technologies = [
   {
-    name: "ggg",
-    icon: ggg,
+    name: "unreal",
+    icon: unreal,
   },
   {
     name: "CSS 3",

@@ -20,7 +20,7 @@ module.exports = {
       },
           /* tailwind.config.cjs */
       backgroundImage: {
-        "hero-pattern": "url('/assets/herobg.webp')",
+        "hero-pattern": "url('/assets/backgroungimage.png')",
       },
     },
   },

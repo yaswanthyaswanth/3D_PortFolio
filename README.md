@@ -141,7 +141,7 @@ import {
   tailwind,
   nodejs,
   mongodb,
-  git,
+  unreal,
   figma,
   docker,
   meta,
@@ -230,8 +230,8 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
+    name: "unreal",
+    icon: unreal,
   },
   {
     name: "figma",
@@ -671,7 +671,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.webp')",
+        "hero-pattern": "url('/src/assets/backgroungimage.png')",
       },
     },
   },
