@@ -30,12 +30,12 @@ const services = [
 ];
 
 const technologies = [
-  { name: "Unreal", icon: javascript, percentage: 90 },
-  { name: "Blender", icon: css, percentage: 85 },
-  { name: "Unity", icon: typescript, percentage: 80 },
-  { name: "Gaea", icon: reactjs, percentage: 95 },
-  { name: "Lens Studio", icon: redux, percentage: 75 },
-  { name: "C++", icon: tailwind, percentage: 90 },
+  { name: "Unreal", icon: javascript, percentage: 80 },
+  { name: "Blender", icon: css, percentage: 100 },
+  { name: "Unity", icon: typescript, percentage: 50 },
+  { name: "Gaea", icon: reactjs, percentage: 60 },
+  { name: "Lens Studio", icon: redux, percentage: 60 },
+  { name: "C++", icon: tailwind, percentage: 50 },
   { name: "Substance Painter", icon: mongodb, percentage: 70 },
 ];
 
