@@ -30,13 +30,13 @@ const services = [
 ];
 
 const technologies = [
-  { name: "JavaScript", icon: javascript },
-  { name: "CSS 3", icon: css },
-  { name: "TypeScript", icon: typescript },
-  { name: "React JS", icon: reactjs },
-  { name: "Redux Toolkit", icon: redux },
-  { name: "Tailwind CSS", icon: tailwind },
-  { name: "MongoDB", icon: mongodb },
+  { name: "Unreal", icon: javascript, percentage: 90 },
+  { name: "Blender", icon: css, percentage: 85 },
+  { name: "Unity", icon: typescript, percentage: 80 },
+  { name: "Gaea", icon: reactjs, percentage: 95 },
+  { name: "Lens Studio", icon: redux, percentage: 75 },
+  { name: "C++", icon: tailwind, percentage: 90 },
+  { name: "Substance Painter", icon: mongodb, percentage: 70 },
 ];
 
 const experiences = [
@@ -61,7 +61,7 @@ const experiences = [
     company_name: "Monolith Asia Technology and Private limited",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Feb 2025 - Apirl 2025",
+    date: "February 2025 - April 2025",
     points: [
       "Created high-quality 3D models (props, environments, and modular assets) using industry-standard software such as Blender",
       "Unwrapped and textured assets using tools like Substance Painter and Photoshop, maintaining visual fidelity while optimizing for performance.",
@@ -70,11 +70,11 @@ const experiences = [
     ],
   },
   {
-    title: "National Level Gameathon(Won 2nd Place)",
+    title: "National Level Gameathon (Won 2nd Place)",
     company_name: "REVA University Bangalore",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Apirl 2025 - Present",
+    date: "April 2025 - Present",
     points: [
       "MY Contributions",
       "Level Design: Crafted immersive environments using modular assets and optimized geometry to enhance performance and gameplay flow.",
