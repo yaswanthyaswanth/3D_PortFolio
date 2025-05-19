@@ -45,12 +45,12 @@ const Contact = () => {
               <span className='text-white font-medium'>LinkedIn</span>
             </div>
             <a
-              href='https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3Bal6RRi3JS5qKIfeL1zmqmg%3D%3D'
+              href='https://www.linkedin.com/in/yaswanth-sundar-586a01251/'
               target='_blank'
               rel='noopener noreferrer'
               className='text-secondary hover:text-white font-medium mt-2'
             >
-              https://www.linkedin.com/yaswanth
+              linkedin.com/in/yaswanth-sundar
             </a>
           </div>
           <div className='flex flex-col'>
@@ -68,7 +68,7 @@ const Contact = () => {
               rel='noopener noreferrer'
               className='text-secondary hover:text-white font-medium mt-2'
             >
-              https://yaswanth.artstation.com/
+              yaswanthsundar.artstation.com
             </a>
           </div>
           <a
