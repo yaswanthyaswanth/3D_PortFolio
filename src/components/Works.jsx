@@ -1,23 +1,43 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { fadeIn } from "../utils/motion";
 import { github, frame } from "../assets";
 import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
+import { useRef } from "react";
 
 const ProjectCard = ({ index, name, description, tags, video, source_code_link }) => {
+  const cardRef = useRef(null);
+
+  // Track scroll progress of the card
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "0.80 end"], // Zoom-out ends when card is 5% visible
+  });
+
+  // Map scroll progress (0 to 1) to scale
+  const scale = useTransform(scrollYProgress, [0, 1], [3, 1]);
+
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      ref={cardRef}
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="relative w-full overflow-hidden"
+    >
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[900px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[900px] w-full mx-auto"
       >
-        <div className="relative w-full h-[360px] frame-container">
+        <motion.div
+          style={{ scale }}
+          transition={{ type: "spring", stiffness: 200 }}
+          className="relative w-full h-[360px] frame-container flex items-center justify-center"
+        >
           {/* Frame image as an overlay */}
           <img
             src={frame}
@@ -56,7 +76,7 @@ const ProjectCard = ({ index, name, description, tags, video, source_code_link }
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Project details */}
         <div className="mt-5">
@@ -103,7 +123,6 @@ const Works = () => {
           These projects reflect my ability to tackle complex challenges, 
           adapt to various technologies, and manage projects effectively from 
           conception to completion.
-
         </motion.p>
       </div>
 
