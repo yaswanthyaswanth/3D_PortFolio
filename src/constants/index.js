@@ -31,7 +31,7 @@ const services = [
 
 const technologies = [
   { name: "Unreal", icon: javascript, percentage: 80 },
-  { name: "Blender", icon: css, percentage: 100 },
+  { name: "Blender", icon: css, percentage: 95 },
   { name: "Unity", icon: typescript, percentage: 50 },
   { name: "Gaea", icon: reactjs, percentage: 60 },
   { name: "Lens Studio", icon: redux, percentage: 60 },
