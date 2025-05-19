@@ -11,12 +11,19 @@ import {
 import CanvasLoader from "../Loader";
 
 const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl]);
+  const [decal, error] = useTexture([props.imgUrl], undefined, (err) =>
+    console.error(`Failed to load texture: ${props.imgUrl}`, err)
+  );
+
+  if (error) {
+    console.warn(`Texture load failed for ${props.imgUrl}`);
+    return null; // Skip rendering if texture fails
+  }
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
+      <directionalLight position={[0, 0, 0.05]}/>
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial

@@ -5,7 +5,6 @@ import {
   web,
   javascript,
   typescript,
-  //unreal,
   css,
   reactjs,
   redux,
@@ -15,82 +14,29 @@ import {
   tesla,
   shopify,
   mongodb,
-
 } from "../assets";
 
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
 ];
 
 const services = [
-  {
-    title: "Unreal Developer",
-    icon: web,
-  },
-  {
-    title: "VR/AR Developer",
-    icon: mobile,
-  },
-  {
-    title: "3D Generalist",
-    icon: backend,
-  },
-  {
-    title: "Lens Studio developer",
-    icon: creator,
-  },
+  { title: "Unreal Developer", icon: web },
+  { title: "VR/AR Developer", icon: mobile },
+  { title: "3D Generalist", icon: backend },
+  { title: "Lens Studio developer", icon: creator },
 ];
 
 const technologies = [
-  // {
-  //   name: "unreal",
-  //   icon: unreal,
-  // },
-  // {
-  //   name: "CSS 3",
-  //   icon: css,
-  // },
-
-   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
- 
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-   {
-    name: "mongodb",
-    icon: mongodb,
-  },
+  { name: "JavaScript", icon: javascript },
+  { name: "CSS 3", icon: css },
+  { name: "TypeScript", icon: typescript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "MongoDB", icon: mongodb },
 ];
 
 const experiences = [
@@ -138,36 +84,20 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-
-];
+const testimonials = [];
 
 const projects = [
   {
     name: "",
-    description:
-      "",
+    description: "",
     tags: [
-      {
-        name: "########",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "########",
-        color: "green-text-gradient",
-      },
-      {
-        name: "#########",
-        color: "pink-text-gradient",
-      },
+      { name: "########", color: "blue-text-gradient" },
+      { name: "########", color: "green-text-gradient" },
+      { name: "#########", color: "pink-text-gradient" },
     ],
-    //video: "https://www.w3schools.com/html/mov_bbb.mp4", // Sample video URL
-    video: "/videos/my-video.mp4", // Updated to local video path
-  
-    
+    video: "/videos/my-video.mp4",
     source_code_link: "https://www.instagram.com/yasshhh__76?igsh=OGU3eGJqeDByM2Rk",
   },
-
 ];
 
 export { services, technologies, experiences, testimonials, projects };
