@@ -10,13 +10,13 @@ const Computers = ({ isMobile }) => {
   return (
     <mesh>
       {/* Ambient Light: Baseline illumination for transparent textures */}
-      <ambientLight intensity={0.5} color="#ffffff" />
+      <ambientLight intensity={0.0} color="#ffffff" />
       {/* Key Light: Strong directional light from right corner, top-down */}
       <spotLight
         position={[20, 50, 10]}
         angle={0.2}
         penumbra={0.8}
-        intensity={2.5}
+        intensity={1.5}
         castShadow
         shadow-mapSize={1024}
         color="#ffffff"
@@ -26,13 +26,13 @@ const Computers = ({ isMobile }) => {
         position={[-10, 20, 15]}
         angle={0.4}
         penumbra={1}
-        intensity={1.2}
+        intensity={1.0}
         color="#ffffff"
       />
       {/* Back Light: Subtle rim effect for depth */}
       <pointLight
         position={[0, 15, -15]}
-        intensity={1.8}
+        intensity={1.0}
         color="#ffffff"
       />
       <primitive
