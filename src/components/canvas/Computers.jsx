@@ -9,31 +9,34 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      {/* Key Light: Main illumination */}
+      {/* Key Light: From right corner, top-down direction */}
       <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
+        position={[20, 50, 10]}
+        angle={0.15}
         penumbra={1}
         intensity={1}
         castShadow
         shadow-mapSize={1024}
+        color="#fff5e6"
       />
       {/* Fill Light: Soften shadows */}
       <spotLight
-        position={[40, 20, 10]}
+        position={[10, 20, 10]}
         angle={0.3}
         penumbra={1}
         intensity={0.8}
+        color="#fff5e6"
       />
-      {/* Back Light: Rim effect to separate model from background */}
+      {/* Back Light: Rim effect */}
       <pointLight
-        position={[0, 40, -10]}
-        intensity={2}
+        position={[0, 10, -10]}
+        intensity={1.5}
+        color="#fff5e6"
       />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.6 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -4.9, -1.5]}
+        position={isMobile ? [0, -4, -2.2] : [0, -5, -1.5]}
         rotation={[-0.01, -0.8, -0.1]}
       />
     </mesh>
