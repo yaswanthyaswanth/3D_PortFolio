@@ -9,29 +9,31 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
-      {/* Key Light: From right corner, top-down direction */}
+      {/* Ambient Light: Baseline illumination for transparent textures */}
+      <ambientLight intensity={0.5} color="#ffffff" />
+      {/* Key Light: Strong directional light from right corner, top-down */}
       <spotLight
         position={[20, 50, 10]}
-        angle={0.15}
-        penumbra={1}
-        intensity={1}
+        angle={0.2}
+        penumbra={0.8}
+        intensity={2.5}
         castShadow
         shadow-mapSize={1024}
-        color="#fff5e6"
+        color="#ffffff"
       />
-      {/* Fill Light: Soften shadows */}
+      {/* Fill Light: Soft, even lighting to reduce shadows */}
       <spotLight
-        position={[10, 20, 10]}
-        angle={0.3}
+        position={[-10, 20, 15]}
+        angle={0.4}
         penumbra={1}
-        intensity={0.8}
-        color="#fff5e6"
+        intensity={1.2}
+        color="#ffffff"
       />
-      {/* Back Light: Rim effect */}
+      {/* Back Light: Subtle rim effect for depth */}
       <pointLight
-        position={[0, 10, -10]}
-        intensity={1.5}
-        color="#fff5e6"
+        position={[0, 15, -15]}
+        intensity={1.8}
+        color="#ffffff"
       />
       <primitive
         object={computer.scene}
@@ -67,7 +69,7 @@ const ComputersCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ preserveDrawingBuffer: true, alpha: true }}
       className="touch-pinch-zoom"
     >
       <Suspense fallback={<CanvasLoader />}>
